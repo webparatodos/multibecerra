@@ -26,7 +26,7 @@ export function LocalBusinessJsonLd() {
         name: service,
       },
     })),
-    sameAs: [siteConfig.facebookUrl],
+    sameAs: [siteConfig.facebookUrl, siteConfig.instagramUrl],
   };
 
   return (

@@ -1,5 +1,6 @@
 import { MapPin, Phone } from "lucide-react";
 import { FacebookIcon } from "@/components/icons/facebook-icon";
+import { InstagramIcon } from "@/components/icons/instagram-icon";
 import { Logo } from "@/components/layout/logo";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { siteConfig } from "@/lib/site-config";
@@ -31,6 +32,15 @@ export function Footer() {
             >
               <FacebookIcon className="h-4 w-4 text-brand-green-light" />
               <span>{siteConfig.facebookLabel}</span>
+            </a>
+            <a
+              href={siteConfig.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-sm text-white/80 transition-colors hover:text-brand-green-light"
+            >
+              <InstagramIcon className="h-4 w-4 text-brand-green-light" />
+              <span>{siteConfig.instagramLabel}</span>
             </a>
             <div className="flex items-center gap-3 text-sm text-white/80">
               <MapPin className="h-4 w-4 shrink-0 text-brand-green-light" />
