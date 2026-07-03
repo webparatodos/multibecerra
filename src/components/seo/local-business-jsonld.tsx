@@ -41,7 +41,7 @@ export function LocalBusinessJsonLd() {
         },
       })),
     },
-    sameAs: [siteConfig.facebookUrl, siteConfig.instagramUrl],
+    sameAs: [siteConfig.instagramUrl],
   };
 
   return (

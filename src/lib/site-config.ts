@@ -7,8 +7,6 @@ export const siteConfig = {
   phone: "617619512",
   phoneDisplay: "617 61 95 12",
   phoneIntl: "+34617619512",
-  facebookUrl: "https://www.facebook.com/search/top?q=multi%20becerra",
-  facebookLabel: "Multi Becerra",
   instagramUrl: "https://www.instagram.com/multibecerraa",
   instagramLabel: "@multibecerraa",
   location: "Ronda y Costa del Sol (Andalucía)",
