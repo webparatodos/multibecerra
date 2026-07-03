@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { PaintRoller, Sprout, Droplets, ArrowRight } from "lucide-react";
 import { buildWhatsAppUrl } from "@/lib/site-config";
@@ -9,6 +10,7 @@ const services = [
   {
     icon: PaintRoller,
     title: "Pintura",
+    href: "/pintura",
     description:
       "Pintura interior y exterior de viviendas, comunidades y locales. Acabados cuidados y materiales de calidad.",
     image:
@@ -18,6 +20,7 @@ const services = [
   {
     icon: Sprout,
     title: "Mantenimiento de jardines",
+    href: "/mantenimiento-jardines",
     description:
       "Poda, corte de césped, cuidado de plantas y diseño de zonas verdes para que tu jardín luzca siempre perfecto.",
     image:
@@ -28,6 +31,7 @@ const services = [
   {
     icon: Droplets,
     title: "Limpieza de exteriores",
+    href: "/limpieza-exteriores",
     description:
       "Limpieza a presión de pisos, patios y veredas. Eliminamos suciedad, musgo y manchas difíciles.",
     image:
@@ -88,15 +92,23 @@ export function Services() {
                 <p className="mt-2 flex-1 text-sm text-brand-dark/70">
                   {service.description}
                 </p>
-                <a
-                  href={buildWhatsAppUrl(service.message)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-dark transition-colors hover:text-brand-green"
-                >
-                  Pedir presupuesto
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                <div className="mt-5 flex items-center gap-4">
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-dark transition-colors hover:text-brand-green"
+                  >
+                    Ver más
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <a
+                    href={buildWhatsAppUrl(service.message)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-brand-dark/60 transition-colors hover:text-brand-green"
+                  >
+                    Pedir presupuesto
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}

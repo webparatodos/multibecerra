@@ -20,12 +20,24 @@ export const siteConfig = {
   ],
   areasServed: [
     "Ronda",
+    "Arriate",
+    "Montejaque",
+    "Benaoján",
+    "Cortes de la Frontera",
     "Marbella",
     "Estepona",
     "San Pedro de Alcántara",
     "Costa del Sol",
   ],
+  openingHours: "Mo-Sa 08:00-19:00",
+  priceRange: "€€",
 };
+
+export const serviceSlugs = {
+  pintura: "pintura",
+  jardines: "mantenimiento-jardines",
+  limpieza: "limpieza-exteriores",
+} as const;
 
 export function buildWhatsAppUrl(message: string) {
   const encoded = encodeURIComponent(message);

@@ -14,10 +14,10 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#nosotros", label: "Nosotros" },
-  { href: "#zona", label: "Zona de trabajo" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#servicios", label: "Servicios" },
+  { href: "/#nosotros", label: "Nosotros" },
+  { href: "/#zona", label: "Zona de trabajo" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export function Header() {

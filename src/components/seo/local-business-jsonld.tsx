@@ -8,6 +8,7 @@ export function LocalBusinessJsonLd() {
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phoneIntl,
+    priceRange: siteConfig.priceRange,
     slogan: siteConfig.claim,
     address: {
       "@type": "PostalAddress",
@@ -19,13 +20,27 @@ export function LocalBusinessJsonLd() {
       "@type": "City",
       name: area,
     })),
-    makesOffer: siteConfig.services.map((service) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: service,
-      },
-    })),
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "19:00",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios Multi Becerra",
+      itemListElement: siteConfig.services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service,
+          areaServed: siteConfig.areasServed.map((area) => ({
+            "@type": "City",
+            name: area,
+          })),
+        },
+      })),
+    },
     sameAs: [siteConfig.facebookUrl, siteConfig.instagramUrl],
   };
 
