@@ -4,9 +4,9 @@ export const siteConfig = {
   description:
     "Mantenimiento de jardines, pintura y limpieza de exteriores en Ronda y la Costa del Sol (Málaga). Presupuesto sin compromiso por WhatsApp.",
   url: "https://www.multibecerra.com",
-  phone: "617619512",
-  phoneDisplay: "617 61 95 12",
-  phoneIntl: "+34617619512",
+  phone: "617619514",
+  phoneDisplay: "617 61 95 14",
+  phoneIntl: "+34617619514",
   instagramUrl: "https://www.instagram.com/multibecerraa",
   instagramLabel: "@multibecerraa",
   location: "Ronda y Costa del Sol (Andalucía)",
